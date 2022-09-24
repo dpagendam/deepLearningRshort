@@ -12,7 +12,7 @@
 #' @examples
 dim.red.EOFs <- function(X, numComponents = NULL, percentageVariation = NULL, plot = TRUE)
 {
-  if(class(X) != "matrix")
+  if(!any(class(X) == "matrix"))
   {
     stop("Argument X must be a matrix.")
   }

@@ -12,7 +12,7 @@
 
 lagMatrix <- function(X, lag, padding = 0)
 {
-  if(class(X) != "matrix")
+  if(!any(class(X) == "matrix"))
   {
     stop("Argument X must be a matrix.")
   }

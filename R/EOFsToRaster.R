@@ -14,7 +14,7 @@
 EOFsToRaster <- function(EOFs, coefficients, dims, validPixels)
 {
   library(raster)
-  if(class(EOFs) != "matrix")
+  if(!any(class(X) == "matrix"))
   {
     stop("Argument EOFs must be a matrix.")
   }

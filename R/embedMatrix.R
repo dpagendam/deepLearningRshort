@@ -12,7 +12,7 @@
 
 embedMatrix <- function(X, lags, padding)
 {
-  if(class(X) != "matrix")
+  if(!any(class(X) == "matrix"))
   {
     stop("Argument X must be a matrix.")
   }

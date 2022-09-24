@@ -11,7 +11,7 @@
 #' @examples 
 scaleCols.pos <- function(X, colMinsX = NULL, colMaxsX = NULL)
 {
-  if(class(X) != "matrix")
+  if(!any(class(X) == "matrix"))
   {
     stop("Argument X must be a matrix.")
   }

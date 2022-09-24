@@ -11,11 +11,11 @@
 proj.EOFs <- function(X, EOFs)
 {
   # Do some checks on dimensions etc
-  if(class(X) != "matrix")
+  if(!any(class(X) == "matrix"))
   {
     stop("Argument X must be a matrix.")
   }
-  if(class(EOFs) != "matrix")
+  if(!any(class(EOFs) == "matrix"))
   {
     stop("Argument EOFs must be a matrix.")
   }
