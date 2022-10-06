@@ -2,6 +2,7 @@
 install.packages("raster", repos = "http://cran.us.r-project.org", 
                  quiet = TRUE)
 library(raster)
+remotes::install_github("dpagendam/deepLearningRshort")
 library(deepLearningRshort)
 #For those using Colab run: install.packages("keras")
 library(keras)
@@ -261,7 +262,9 @@ history <- model %>% fit(x = X.rnn.train, y = Y.rnn.train,
            batch_size = batchSize, epochs = 200, shuffle = TRUE, 
            validation_data = list(X.rnn.test, Y.rnn.test),
            callbacks = list(callback_early_stopping(
-           monitor = "val_loss", min_delta = 0, patience = 20)))
+           monitor = "val_loss", min_delta = 0, patience = 20),
+           callback_model_checkpoint(filepath = "MDB_Gaussian.hd5",
+           save_best_only = TRUE, save_weights_only = FALSE)))
 
 bestModel <- load_model_hdf5(filepath = "MDB_Gaussian.hd5",
              custom_objects = list(Gaussian_logLikelihood = 
