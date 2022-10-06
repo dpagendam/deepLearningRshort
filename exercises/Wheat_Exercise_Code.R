@@ -1,4 +1,7 @@
+library(remotes)
+remotes::install_github("dpagendam/deepLearningRshort")
 library(deepLearningRshort)
+#For those using Colab run: install.packages("keras")
 data("wheat")
 
 
