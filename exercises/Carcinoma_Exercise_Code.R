@@ -12,7 +12,7 @@ install.packages(c("pbapply", "keras", "raster"),
                  
                  
                  
-devtools::install_github("dpagendam/deepLearningRshort")
+remotes::install_github("dpagendam/deepLearningRshort")
 install.packages("BiocManager", 
                  repos = "http://cran.us.r-project.org", 
                  quiet = TRUE)

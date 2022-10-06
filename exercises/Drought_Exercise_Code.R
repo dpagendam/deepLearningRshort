@@ -3,6 +3,7 @@ install.packages("raster", repos = "http://cran.us.r-project.org",
                  quiet = TRUE)
 library(raster)
 library(deepLearningRshort)
+#For those using Colab run: install.packages("keras")
 library(keras)
 
 
